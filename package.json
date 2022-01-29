@@ -12,10 +12,14 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "flow": "flow",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "prettier --write \"src/**/*.{js,jsx}\"",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "dev": "parcel src/index.html"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +38,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.12",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-flow": "^7.16.7",
+    "eslint": "^8.8.0",
+    "eslint-plugin-react": "^7.28.0",
+    "flow-bin": "^0.170.0",
+    "parcel": "^2.2.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "prettier": "^2.5.1"
   }
 }
