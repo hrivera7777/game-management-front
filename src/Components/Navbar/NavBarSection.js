@@ -6,7 +6,9 @@ class NavBarSection extends Component {
     return (
       <div>
         <div className="flex flex-col">
-          <h3 className="inline-block">{this.props.sectionName}</h3>
+          <h3 className="ml-10 inline-block text-lg text-principal-color">
+            {this.props.sectionName}
+          </h3>
           {this.props.attributes.map((item) => {
             return (
               <NavBarSectionItem
