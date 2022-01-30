@@ -13,13 +13,13 @@ class Card extends Component {
             Genre
           </h2>
           <div className="mx-auto my-12 flex flex-row">
-            <h2 className="mr-4 inline-block font-poppins text-3xl text-white ">
+            <h2 className="mr-4 inline-block py-3 font-poppins text-3xl text-white ">
               $12.99
             </h2>
-            <div className="flex flex-row rounded-full bg-principal-button py-2 px-4">
-              <img src={plusCircle} alt="card-image" />
-              <button className="text-white">Favorite</button>
-            </div>
+            <button className="flex flex-row rounded-full bg-principal-color py-2 px-5">
+              <img className="mr-3" src={plusCircle} alt="card-image" />
+              <h2 className="py-3 text-white">Favorite</h2>
+            </button>
           </div>
         </div>
       </div>
