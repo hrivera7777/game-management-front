@@ -1,6 +1,6 @@
 import { Component } from "react";
-import NavBarIcons from "./NavBarIcons";
-import NavBarSection from "./NavBarSection";
+import NavBarIcons from "../Components/Navbar/NavBarIcons";
+import NavBarSection from "../Components/Navbar/NavBarSection";
 
 class NavBar extends Component {
   sectionAttributes = [
