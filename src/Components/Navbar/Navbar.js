@@ -5,14 +5,14 @@ import NavBarSection from "./NavBarSection";
 class NavBar extends Component {
   sectionAttributes = [
     {
-      sectionName: "services",
+      sectionName: "# Services",
       attributes: [
         { name: "Games", logo: NavBarIcons.gameLogo },
         { name: "Favorites", logo: NavBarIcons.favoriteLogo },
       ],
     },
     {
-      sectionName: "login",
+      sectionName: "# Login",
       attributes: [
         { name: "Sign In", logo: NavBarIcons.signInLogo },
         { name: "Sign Up", logo: NavBarIcons.signUpLogo },
@@ -22,7 +22,8 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <div className="flex flex-col">
+        <div className="flex h-screen w-fit flex-col bg-principal-background-color">
+          <h2 className="mx-auto mt-10 mb-10 text-white">UserName</h2>
           {this.sectionAttributes.map(({ sectionName, attributes }) => {
             return (
               <NavBarSection
