@@ -6,7 +6,7 @@ class Card extends Component {
   render() {
     return (
       <div>
-        <div className="mx-auto my-40 flex max-w-xs flex-col rounded-lg bg-principal-background-color">
+        <div className="flex max-w-xs flex-col rounded-lg bg-principal-background-color">
           <img className="rounded-t-lg" src={kratos} alt="principal-image" />
           <h2 className="mx-8 mt-8 text-2xl font-bold text-white">Name</h2>
           <h2 className="mx-8 font-poppins text-xl font-medium text-white">
