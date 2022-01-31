@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       colors: {
         "principal-background-color": "#28272B",
-        "principal-color": "#FFA049",
+        "principal-orange-color": "#FFA049",
         "icon-background": "#46444B",
         "pages-background": "#3C3A40",
       },
