@@ -1,6 +1,7 @@
 import kratos from "/public/img/kratos_200.jpg";
-import plusCircle from "/public/img/plus-circle.svg";
+import plusCircle from "/public/img/button/plus-circle.svg";
 import { Component } from "react";
+import Button from "./Button";
 
 class Card extends Component {
   render() {
@@ -16,10 +17,11 @@ class Card extends Component {
             <h2 className="mr-4 inline-block py-3 font-poppins text-3xl text-white ">
               $12.99
             </h2>
-            <button className="flex flex-row rounded-full bg-principal-color py-2 px-5">
-              <img className="mr-3" src={plusCircle} alt="card-image" />
-              <h2 className="py-3 text-white">Favorite</h2>
-            </button>
+            <Button
+              logo={plusCircle}
+              text="favorites"
+              color="principal-orange-color"
+            />
           </div>
         </div>
       </div>
