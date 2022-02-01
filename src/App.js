@@ -1,15 +1,7 @@
-import NavBar from "./Layout/Navbar";
-import Grid from "./Layout/Grid";
+import Home from "./pages/Home";
 
 function App() {
-  return (
-    <div>
-      <div className="flex flex-row bg-pages-background">
-        <NavBar />
-        <Grid />
-      </div>
-    </div>
-  );
+  return <Home />;
 }
 
 export default App;
