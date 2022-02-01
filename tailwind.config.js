@@ -17,6 +17,7 @@ module.exports = {
         "principal-orange": "#FFA049",
         "principal-green": "#5DBF79",
         "principal-red": "#D7263D",
+        "second-gray": "#46444B",
         "icon-background": "#46444B",
         "pages-background": "#3C3A40",
       },
