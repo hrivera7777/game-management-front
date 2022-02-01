@@ -17,11 +17,7 @@ class Card extends Component {
             <h2 className="mr-4 inline-block py-3 font-poppins text-3xl text-white ">
               $12.99
             </h2>
-            <Button
-              logo={plusCircle}
-              text="favorites"
-              color="principal-orange"
-            />
+            <Button logo={plusCircle} text="favorites" type="favorite" />
           </div>
         </div>
       </div>
