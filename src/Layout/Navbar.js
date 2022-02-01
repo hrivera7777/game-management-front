@@ -22,7 +22,7 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <div className="sticky top-0 bottom-0 hidden h-screen w-max flex-col bg-principal-background-color tablet:flex">
+        <div className="sticky top-0 bottom-0 hidden h-screen w-max flex-col bg-principal-background tablet:flex">
           <h2 className="mx-auto mt-10 mb-10 text-white">UserName</h2>
           {this.sectionAttributes.map(({ sectionName, attributes }) => {
             return (

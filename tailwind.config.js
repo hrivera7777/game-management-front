@@ -13,8 +13,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        "principal-background-color": "#28272B",
-        "principal-orange-color": "#FFA049",
+        "principal-background": "#28272B",
+        "principal-orange": "#FFA049",
+        "principal-green": "#5DBF79",
+        "principal-red": "#D7263D",
         "icon-background": "#46444B",
         "pages-background": "#3C3A40",
       },
