@@ -5,7 +5,7 @@ class Grid extends Component {
   render() {
     return (
       <div>
-        <div className="mt-4 flex flex-shrink flex-wrap items-start justify-center gap-4 overflow-auto">
+        <div className="mt-4 ml-4 flex flex-shrink flex-wrap items-start justify-center gap-4 overflow-auto">
           <Card />
         </div>
       </div>
