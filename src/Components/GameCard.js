@@ -14,7 +14,7 @@ class GameCard extends Component {
             Genre
           </h2>
           <div className="mx-auto my-12 flex flex-row">
-            <h2 className="mr-4 inline-block py-3 font-poppins text-3xl text-white ">
+            <h2 className="mr-2 inline-block py-3 font-poppins text-3xl text-white ">
               $12.99
             </h2>
             <GeneralButton logo={plusCircle} text="favorites" type="favorite" />

@@ -15,7 +15,7 @@ class GeneralButton extends Component {
       <button
         className={`${this.defineColor(
           type
-        )} flex transform flex-row rounded-full py-2 px-5 transition duration-300 ease-in-out hover:scale-95`}
+        )} mx-2 flex transform flex-row rounded-full py-2 px-5 transition duration-300 ease-in-out hover:scale-95`}
       >
         <img className="mr-3" src={logo} alt="card-image" />
         <h2 className="py-3 text-white">{text}</h2>
