@@ -1,9 +1,9 @@
 import kratos from "/public/img/kratos_200.jpg";
 import plusCircle from "/public/img/button/plus-circle.svg";
 import { Component } from "react";
-import Button from "./Button";
+import GeneralButton from "./GeneralButton";
 
-class Card extends Component {
+class GameCard extends Component {
   render() {
     return (
       <div>
@@ -17,7 +17,7 @@ class Card extends Component {
             <h2 className="mr-4 inline-block py-3 font-poppins text-3xl text-white ">
               $12.99
             </h2>
-            <Button logo={plusCircle} text="favorites" type="favorite" />
+            <GeneralButton logo={plusCircle} text="favorites" type="favorite" />
           </div>
         </div>
       </div>
@@ -25,4 +25,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default GameCard;
