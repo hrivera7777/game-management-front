@@ -6,10 +6,13 @@ module.exports = {
       // => @media (min-width: 640px) { ... }
 
       laptop: "1350px",
-      // => @media (min-width: 1024px) { ... }
+      // => @media (min-width: 1350px) { ... }
 
       desktop: "1900px",
-      // => @media (min-width: 1280px) { ... }
+      // => @media (min-width: 1900px) { ... }
+
+      largeDesktop: "2400px",
+      // => @media (min-width: 2400px) { ... }
     },
     extend: {
       colors: {
@@ -23,6 +26,9 @@ module.exports = {
         "secondary-green": "#99D6AA",
         "icon-background": "#46444B",
         "pages-background": "#3C3A40",
+      },
+      maxWidth: {
+        "8xl": "85rem",
       },
     },
     fontFamily: {
