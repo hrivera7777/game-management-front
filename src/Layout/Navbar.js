@@ -18,6 +18,10 @@ class NavBar extends Component {
         { name: "Sign Up", logo: NavBarIcons.signUpLogo },
       ],
     },
+    {
+      sectionName: "# Summarize",
+      attributes: [{ name: "Reports", logo: NavBarIcons.reportLogo }],
+    },
   ];
   render() {
     return (
