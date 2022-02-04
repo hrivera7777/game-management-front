@@ -1,8 +1,6 @@
 import GameCard from "../Components/GameCard";
 import FavoriteCard from "../Components/Favorite/FavoriteCard";
 import FavoriteDescriptionCard from "../Components/Favorite/FavoriteDescriptionCard";
-import MostAddedGameCard from "../Components/report/MostAddedGameCard";
-import RegisteredUsersCard from "../Components/report/RegisteredUsersCard";
 import { Component } from "react";
 
 class Grid extends Component {
