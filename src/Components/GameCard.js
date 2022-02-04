@@ -16,7 +16,12 @@ class GameCard extends Component {
           <h2 className="mr-2 inline-block py-3 font-poppins text-3xl text-white ">
             $12.99
           </h2>
-          <GeneralButton logo={plusCircle} text="favorites" type="favorite" />
+          <GeneralButton
+            logo={plusCircle}
+            text="Favorites"
+            type="favorite"
+            category="game"
+          />
         </div>
       </div>
     );
