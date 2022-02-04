@@ -1,6 +1,6 @@
 import { Component } from "react";
-import MostAddedGameCard from "../Components/report/MostAddedGameCard";
-import RegisteredUsersCard from "../Components/report/RegisteredUsersCard";
+import MostAddedGameCard from "../Components/Report/MostAddedGameCard";
+import RegisteredUsersCard from "../Components/Report/RegisteredUsersCard";
 import NavBar from "../Layout/Navbar";
 
 class Reports extends Component {
