@@ -5,7 +5,7 @@ import inputIcon from "/public/img/auth/input.svg";
 import emailIcon from "/public/img/auth/email.svg";
 import passwordIcon from "/public/img/auth/password.svg";
 
-class SignIn extends Component {
+class SignUp extends Component {
   render() {
     const inputs = [
       { logo: inputIcon, labelName: "Name", type: "text" },
@@ -20,7 +20,7 @@ class SignIn extends Component {
     ];
     return (
       <div>
-        <div className="flex h-screen flex-row bg-pages-background">
+        <div className="flex h-screen flex-row overflow-y-auto bg-pages-background">
           <AuthCard inputs={inputs} />;
         </div>
       </div>
@@ -28,4 +28,4 @@ class SignIn extends Component {
   }
 }
 
-export default SignIn;
+export default SignUp;
