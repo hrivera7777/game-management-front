@@ -13,7 +13,7 @@ class Grid extends Component {
     };
     const { type } = this.props;
     return (
-      <div className="mx-auto block">
+      <div className="mx-auto block min-h-screen">
         <div className="my-4 flex flex-col gap-4 px-4 tablet:grid tablet:grid-cols-2 laptop:grid-cols-3 desktop:grid-cols-5 desktop:gap-3">
           {cardTypes[type]}
         </div>
