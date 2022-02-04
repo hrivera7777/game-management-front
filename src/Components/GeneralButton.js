@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Modal from "./Modal";
 
 class GeneralButton extends Component {
   colorOptions = {
@@ -9,17 +10,28 @@ class GeneralButton extends Component {
   defineColor(type) {
     return this.colorOptions[type];
   }
+  state = { showModal: false };
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
   render() {
     const { logo, text, type } = this.props;
     return (
-      <button
-        className={`${this.defineColor(
-          type
-        )} mx-2 flex w-max transform flex-row rounded-full py-1 px-4 transition duration-300 ease-in-out hover:scale-95`}
-      >
-        <img className="mr-3" src={logo} alt="card-image" />
-        <h2 className="py-3 text-white">{text}</h2>
-      </button>
+      <div>
+        <button
+          onClick={this.toggleModal}
+          className={`${this.defineColor(
+            type
+          )} mx-2 flex w-max transform flex-row rounded-full py-1 px-4 transition duration-300 ease-in-out hover:scale-95`}
+        >
+          <img className="mr-3" src={logo} alt="card-image" />
+          <h2 className="py-3 text-white">{text}</h2>
+        </button>
+        {this.state.showModal ? (
+          <Modal
+            showModal={this.state.showModal}
+            toggleModal={this.toggleModal}
+          />
+        ) : null}
+      </div>
     );
   }
 }
