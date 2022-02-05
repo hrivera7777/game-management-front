@@ -5,9 +5,10 @@ import GeneralButton from "../GeneralButton";
 
 class FavoriteCard extends Component {
   render() {
+    const { complete } = this.props;
     return (
       <div>
-        <div className="flex max-w-xs flex-col rounded-lg bg-principal-background px-8">
+        <div className="flex max-w-xs flex-col rounded-lg bg-principal-background px-8 pb-8">
           <h2 className="mt-8 text-2xl font-bold text-white">
             Favorite name list
           </h2>
@@ -17,20 +18,22 @@ class FavoriteCard extends Component {
             quisque massa tellus vivamus nec natoque pharetra, diam faucibus
             ultricies tristique.
           </p>
-          <div className="mx-auto my-12 flex flex-row">
-            <GeneralButton
-              logo={editIcon}
-              text="Edit"
-              type="edit"
-              category={"favorite"}
-            />
-            <GeneralButton
-              logo={deleteIcon}
-              text="Delete"
-              type="delete"
-              category={"favorite"}
-            />
-          </div>
+          {complete ? (
+            <div className="mx-auto mt-4 flex flex-row">
+              <GeneralButton
+                logo={editIcon}
+                text="Edit"
+                type="edit"
+                category={"favorite"}
+              />
+              <GeneralButton
+                logo={deleteIcon}
+                text="Delete"
+                type="delete"
+                category={"favorite"}
+              />
+            </div>
+          ) : null}
         </div>
       </div>
     );
