@@ -23,6 +23,7 @@ module.exports = {
         "principal-purple": "#7C5AAF",
         "second-gray": "#46444B",
         "secondary-purple": "#533A79",
+        "secondary-red": "#DD4055",
         "secondary-green": "#99D6AA",
         "icon-background": "#46444B",
         "pages-background": "#3C3A40",

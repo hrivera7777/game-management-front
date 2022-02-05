@@ -18,8 +18,18 @@ class FavoriteCard extends Component {
             ultricies tristique.
           </p>
           <div className="mx-auto my-12 flex flex-row">
-            <GeneralButton logo={editIcon} text="Edit" type="edit" />
-            <GeneralButton logo={deleteIcon} text="Delete" type="delete" />
+            <GeneralButton
+              logo={editIcon}
+              text="Edit"
+              type="edit"
+              category={"favorite"}
+            />
+            <GeneralButton
+              logo={deleteIcon}
+              text="Delete"
+              type="delete"
+              category={"favorite"}
+            />
           </div>
         </div>
       </div>
