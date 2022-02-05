@@ -21,7 +21,7 @@ class SignUp extends Component {
     return (
       <div>
         <div className="flex h-screen flex-row overflow-y-auto bg-pages-background">
-          <AuthCard inputs={inputs} />;
+          <AuthCard inputs={inputs} />
         </div>
       </div>
     );
