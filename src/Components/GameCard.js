@@ -36,18 +36,18 @@ function AdminUser(props) {
 }
 class GameCard extends Component {
   render() {
-    const { complete } = this.props;
+    const { name, genre, price, filename, complete } = this.props;
     const admin = true;
     return (
       <div className="flex max-w-xs flex-col rounded-lg bg-principal-background pb-10">
-        <img className="rounded-t-lg" src={kratos} alt="principal-image" />
-        <h2 className="mx-8 mt-8 text-2xl font-bold text-white">Name</h2>
+        <img className="rounded-t-lg" src={kratos} alt={`${filename}`} />
+        <h2 className="mx-8 mt-8 text-2xl font-bold text-white">{name}</h2>
         <h2 className="mx-8 font-poppins text-xl font-medium text-white">
-          Genre
+          {genre}
         </h2>
         <div className="ml-8 flex flex-wrap">
           <h2 className="mr-2 inline-block py-3 font-poppins text-3xl text-white ">
-            $12.99
+            ${price}
           </h2>
           {admin ? (
             <AdminUser complete={complete} />
