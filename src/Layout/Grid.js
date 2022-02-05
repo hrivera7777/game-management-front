@@ -6,8 +6,8 @@ import { Component } from "react";
 class Grid extends Component {
   render() {
     const cardTypes = {
-      game: <GameCard />,
-      favorite: <FavoriteCard />,
+      game: <GameCard complete={true} />,
+      favorite: <FavoriteCard complete={true} />,
     };
     const { type } = this.props;
     return (
