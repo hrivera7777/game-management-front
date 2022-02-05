@@ -12,7 +12,12 @@ function EditFields(props) {
 
 function DeleteDescription() {
   return (
-    <p className="text-sm text-white">Are you sure to delete --somethig--</p>
+    <div>
+      <p className="text-center text-lg font-bold text-white">Are you sure?</p>
+      <p className="text-center text-sm text-white">
+        Do you really want to delete --something--?
+      </p>
+    </div>
   );
 }
 
@@ -60,14 +65,14 @@ function ModalContent(props) {
     <div className="inline-block h-full w-full max-w-md transform overflow-hidden rounded-2xl bg-principal-background px-8 py-4 text-left align-middle shadow-xl transition-all">
       <Dialog.Title
         as="h2"
-        className="text-lg font-medium leading-6 text-white"
+        className="text-center text-lg font-bold leading-6 text-white"
       >
         {name}
       </Dialog.Title>
 
       <SelectDescription type={type} inputs={inputs} category={category} />
 
-      <div className="mt-4 flex flex-row justify-start">
+      <div className="mt-4 flex flex-row justify-center">
         <button
           type="button"
           className="mr-4 rounded-md border border-transparent bg-principal-purple px-4 py-2 text-sm font-medium text-white hover:bg-secondary-purple focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
