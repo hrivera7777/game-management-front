@@ -10,12 +10,12 @@ class Home extends Component {
     this.setState({ games: json });
   }
   render() {
-    const { type } = this.props;
+    const { category } = this.props;
     const { games } = this.state;
     return (
       <div className="flex flex-row bg-pages-background">
         <NavBar />
-        <Grid type={type} games={games} />
+        <Grid category={category} games={games} />
       </div>
     );
   }

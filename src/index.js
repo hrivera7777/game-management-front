@@ -13,8 +13,8 @@ ReactDOM.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="games" element={<Home type="game" />} />
-      <Route path="favorites" element={<Home type="favorite" />} />
+      <Route path="games" element={<Home category={"game"} />} />
+      <Route path="favorites" element={<Home category={"favorite"} />} />
       <Route path="sign-in" element={<SignIn />} />
       <Route path="sign-up" element={<SignUp />} />
       <Route path="reports" element={<Reports />} />

@@ -6,37 +6,39 @@ import { Component } from "react";
 import GeneralButton from "./GeneralButton";
 
 function RegularUser(props) {
-  return props.complete ? (
+  const { complete, category } = props;
+  return complete ? (
     <GeneralButton
       logo={plusCircle}
       text="Favorites"
       type="favorite"
-      category="game"
+      category={category}
     />
   ) : null;
 }
 
 function AdminUser(props) {
-  return props.complete ? (
+  const { complete, category } = props;
+  return complete ? (
     <div className="mt-4 flex flex-row">
       <GeneralButton
         logo={editIcon}
         text="Edit"
         type="edit"
-        category={"game"}
+        category={category}
       />
       <GeneralButton
         logo={deleteIcon}
         text="Delete"
         type="delete"
-        category={"game"}
+        category={category}
       />
     </div>
   ) : null;
 }
 class GameCard extends Component {
   render() {
-    const { name, genre, price, filename, complete } = this.props;
+    const { name, genre, price, filename, complete, category } = this.props;
     const admin = true;
     return (
       <div className="flex max-w-xs flex-col rounded-lg bg-principal-background pb-10">
@@ -50,9 +52,9 @@ class GameCard extends Component {
             ${price}
           </h2>
           {admin ? (
-            <AdminUser complete={complete} />
+            <AdminUser complete={complete} category={category} />
           ) : (
-            <RegularUser complete={complete} />
+            <RegularUser complete={complete} category={category} />
           )}
         </div>
       </div>
