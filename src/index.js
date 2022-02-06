@@ -12,12 +12,17 @@ const app = document.getElementById("root");
 ReactDOM.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="games" element={<Home category={"game"} />} />
-      <Route path="favorites" element={<Home category={"favorite"} />} />
-      <Route path="sign-in" element={<SignIn />} />
-      <Route path="sign-up" element={<SignUp />} />
-      <Route path="reports" element={<Reports />} />
+      <Route exact strict path="/" element={<App />} />
+      <Route exact strict path="/games" element={<Home category={"game"} />} />
+      <Route
+        exact
+        strict
+        path="/favorites"
+        element={<Home category={"favorite"} />}
+      />
+      <Route exact strict path="/sign-in" element={<SignIn />} />
+      <Route exact strict path="/sign-up" element={<SignUp />} />
+      <Route exact strict path="/reports" element={<Reports />} />
     </Routes>
   </BrowserRouter>,
   app
