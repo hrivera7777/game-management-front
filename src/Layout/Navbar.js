@@ -20,6 +20,26 @@ class NavBar extends Component {
       attributes: [{ name: "Logout", logo: NavBarIcons.logoutLogo }],
     },
   ];
+
+  selectFields(roleName) {
+    console.log(this.sectionAttributes);
+    return this.sectionAttributes.map(({ sectionName, attributes }) => {
+      console.log(roleName);
+      return roleName === "admin" ? (
+        <NavBarSection
+          key={sectionName}
+          sectionName={sectionName}
+          attributes={attributes}
+        />
+      ) : sectionName != "# Summarize" ? (
+        <NavBarSection
+          key={sectionName}
+          sectionName={sectionName}
+          attributes={attributes}
+        />
+      ) : null;
+    });
+  }
   render() {
     const payload = JSON.parse(
       atob(localStorage.getItem("token").split(".")[1])
@@ -31,17 +51,9 @@ class NavBar extends Component {
           Hi <span className="font-bold">{name}</span>
         </h2>
         <h2 className="mx-auto mb-10 text-white">
-          you are <span className="font-bold">{roleName}</span>
+          your role is <span className="font-bold">{roleName}</span>
         </h2>
-        {this.sectionAttributes.map(({ sectionName, attributes }) => {
-          return payload != null ? (
-            <NavBarSection
-              key={sectionName}
-              sectionName={sectionName}
-              attributes={attributes}
-            />
-          ) : null;
-        })}
+        {this.selectFields(roleName)}
       </div>
     );
   }
