@@ -104,7 +104,7 @@ class AuthCard extends Component {
         {inputs.map((inputProperties, index) => {
           return <InputText {...inputProperties} key={index} />;
         })}
-        <AuthButton />
+        <AuthButton type={type} />
       </form>
     );
   }
