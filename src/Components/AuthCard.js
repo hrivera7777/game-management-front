@@ -2,6 +2,7 @@ import { Component } from "react";
 import InputText from "./InputText";
 import AuthButton from "./AuthButton";
 import { withRouter } from "./withRoutes";
+import { Link } from "react-router-dom";
 
 class AuthCard extends Component {
   handleSignUpSubmit = this.handleSignUpSubmit.bind(this);
@@ -105,6 +106,13 @@ class AuthCard extends Component {
           return <InputText {...inputProperties} key={index} />;
         })}
         <AuthButton type={type} />
+        {type === "Sign In" ? (
+          <Link to={"/sign-up"} className="mx-auto mt-4 text-white">
+            {" "}
+            Don't miss anything <span className="font-bold">Sign Up </span>for
+            free
+          </Link>
+        ) : null}
       </form>
     );
   }
