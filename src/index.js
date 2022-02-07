@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Reports from "./pages/Reports";
+import Logout from "./pages/Logout";
 
 const app = document.getElementById("root");
 ReactDOM.render(
@@ -23,6 +24,7 @@ ReactDOM.render(
       <Route exact strict path="/sign-in" element={<SignIn />} />
       <Route exact strict path="/sign-up" element={<SignUp />} />
       <Route exact strict path="/reports" element={<Reports />} />
+      <Route exact strict path="/logout" element={<Logout />} />
     </Routes>
   </BrowserRouter>,
   app
