@@ -12,15 +12,12 @@ class NavBar extends Component {
       ],
     },
     {
-      sectionName: "# Login",
-      attributes: [
-        { name: "Sign In", logo: NavBarIcons.signInLogo },
-        { name: "Sign Up", logo: NavBarIcons.signUpLogo },
-      ],
-    },
-    {
       sectionName: "# Summarize",
       attributes: [{ name: "Reports", logo: NavBarIcons.reportLogo }],
+    },
+    {
+      sectionName: "# Logout",
+      attributes: [{ name: "Logout", logo: NavBarIcons.logoutLogo }],
     },
   ];
   render() {
@@ -37,13 +34,13 @@ class NavBar extends Component {
           you are <span className="font-bold">{roleName}</span>
         </h2>
         {this.sectionAttributes.map(({ sectionName, attributes }) => {
-          return (
+          return payload != null ? (
             <NavBarSection
               key={sectionName}
               sectionName={sectionName}
               attributes={attributes}
             />
-          );
+          ) : null;
         })}
       </div>
     );
