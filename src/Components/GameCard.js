@@ -18,7 +18,7 @@ function RegularUser(props) {
 }
 
 function AdminUser(props) {
-  const { complete, category } = props;
+  const { complete, category, game } = props;
   return complete ? (
     <div className="mt-4 flex flex-row">
       <GeneralButton
@@ -26,19 +26,28 @@ function AdminUser(props) {
         text="Edit"
         type="edit"
         category={category}
+        game={game}
       />
       <GeneralButton
         logo={deleteIcon}
         text="Delete"
         type="delete"
         category={category}
+        game={game}
       />
     </div>
   ) : null;
 }
 class GameCard extends Component {
   render() {
-    const { name, genre, price, filename, complete, category } = this.props;
+    const { id, name, genre, price, filename, complete, category } = this.props;
+    const game = {
+      id: id,
+      name: name,
+      genre: genre,
+      price: price,
+      filename: filename,
+    };
     const admin = true;
     return (
       <div className="flex max-w-xs flex-col rounded-lg bg-principal-background pb-10">
@@ -52,7 +61,7 @@ class GameCard extends Component {
             ${price}
           </h2>
           {admin ? (
-            <AdminUser complete={complete} category={category} />
+            <AdminUser complete={complete} category={category} game={game} />
           ) : (
             <RegularUser complete={complete} category={category} />
           )}
