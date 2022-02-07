@@ -8,12 +8,14 @@ import GeneralButton from "./GeneralButton";
 function RegularUser(props) {
   const { complete, category } = props;
   return complete ? (
-    <GeneralButton
-      logo={plusCircle}
-      text="Favorites"
-      type="favorite"
-      category={category}
-    />
+    <div className="mx-10 mt-4 ">
+      <GeneralButton
+        logo={plusCircle}
+        text="Favorites"
+        type="favorite"
+        category={category}
+      />
+    </div>
   ) : null;
 }
 
@@ -48,7 +50,11 @@ class GameCard extends Component {
       price: price,
       filename: filename,
     };
-    const admin = true;
+
+    const payload = JSON.parse(
+      atob(localStorage.getItem("token").split(".")[1])
+    );
+    const { roleName } = payload;
     return (
       <div className="flex max-w-xs flex-col rounded-lg bg-principal-background pb-10">
         <img className="rounded-t-lg" src={kratos} alt={`${filename}`} />
@@ -56,11 +62,11 @@ class GameCard extends Component {
         <h2 className="mx-8 font-poppins text-xl font-medium text-white">
           {genre}
         </h2>
-        <div className="ml-8 flex flex-wrap">
+        <div className="ml-8 flex flex-wrap ">
           <h2 className="mr-2 inline-block py-3 font-poppins text-3xl text-white ">
             ${price}
           </h2>
-          {admin ? (
+          {roleName === "admin" ? (
             <AdminUser complete={complete} category={category} game={game} />
           ) : (
             <RegularUser complete={complete} category={category} />
