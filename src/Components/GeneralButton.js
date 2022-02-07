@@ -4,7 +4,7 @@ import Modal from "./Modal";
 class GeneralButton extends Component {
   colorOptions = {
     Create: "bg-principal-purple",
-    Favorite: "bg-principal-orange",
+    Favorites: "bg-principal-orange",
     Edit: "bg-principal-green",
     Delete: "bg-principal-red",
   };
