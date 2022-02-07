@@ -93,7 +93,7 @@ class AuthCard extends Component {
     return (
       <form
         onSubmit={
-          type === "signIn" ? this.handleSignInSubmit : this.handleSignUpSubmit
+          type === "Sign In" ? this.handleSignInSubmit : this.handleSignUpSubmit
         }
         className="mx-auto my-auto flex h-fit w-fit flex-col rounded-3xl bg-principal-background p-12"
       >
