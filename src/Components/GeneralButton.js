@@ -14,7 +14,7 @@ class GeneralButton extends Component {
   state = { showModal: false };
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
   render() {
-    const { logo, text, type, category } = this.props;
+    const { logo, text, type, category, game, favorite } = this.props;
     return (
       <div>
         <button
@@ -33,6 +33,8 @@ class GeneralButton extends Component {
             type={type}
             category={category}
             name={text}
+            game={game}
+            favorite={favorite}
           />
         ) : null}
       </div>
