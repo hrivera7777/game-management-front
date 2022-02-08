@@ -4,6 +4,7 @@ import editIcon from "/public/img/button/edit.svg";
 import deleteIcon from "/public/img/button/delete.svg";
 import { Component } from "react";
 import GeneralButton from "./GeneralButton";
+import GameIcons from "./GameIcon";
 
 function RegularUser(props) {
   const { complete, category } = props;
@@ -50,14 +51,19 @@ class GameCard extends Component {
       price: price,
       filename: filename,
     };
-
     const payload = JSON.parse(
       atob(localStorage.getItem("token").split(".")[1])
     );
     const { roleName } = payload;
+    const properFileName = filename.substring(12, filename.length).split(".");
+
     return (
       <div className="flex max-w-xs flex-col rounded-lg bg-principal-background pb-10">
-        <img className="rounded-t-lg" src={kratos} alt={`${filename}`} />
+        <img
+          className="rounded-t-lg"
+          src={GameIcons[properFileName[0]]}
+          alt={`${filename}`}
+        />
         <h2 className="mx-8 mt-8 text-2xl font-bold text-white">{name}</h2>
         <h2 className="mx-8 font-poppins text-xl font-medium text-white">
           {genre}
